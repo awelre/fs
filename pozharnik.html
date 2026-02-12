@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELEASE | FLASHSOUND</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #ffdf00;
+            --black: #000000;
+        }
+
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Dela Gothic One', sans-serif;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: var(--yellow);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 4px 4px 0 #000;
+        }
+
+        /* Контейнер, который обрезает лишнее */
+        .smartlink-clipper {
+            width: 100%;
+            max-width: 480px; /* Стандартная ширина бандлинка */
+            height: 620px;    /* ВЫСОТА КОНТЕЙНЕРА: подбери так, чтобы куки скрылись */
+            overflow: hidden; /* ГЛАВНОЕ: скрывает всё, что выходит за рамки */
+            border: 5px solid var(--black);
+            box-shadow: 12px 12px 0 var(--yellow);
+            position: relative;
+            background: #fff;
+        }
+
+        /* Сам фрейм с контентом */
+        iframe {
+            width: 100%;
+            height: 750px;    /* ВЫСОТА ФРЕЙМА: должна быть больше высоты контейнера */
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-family: sans-serif;
+            font-weight: 900;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://me.flashsound.v6.navy/" class="logo">FLASHSOUND</a>
+
+    <div class="smartlink-clipper">
+        <iframe src="https://muz.lc/middlemusiclinknumb1"></iframe>
+    </div>
+
+    <div class="footer-note">© 2026 FLASHSOUND DISTRIBUTION</div>
+
+</body>
+</html>
