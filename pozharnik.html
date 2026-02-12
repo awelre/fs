@@ -2,74 +2,63 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>RELEASE | FLASHSOUND</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --yellow: #ffdf00;
-            --black: #000000;
-        }
-
-        body {
-            background-color: #ffffff;
+        /* Убираем все отступы и скролл у самой страницы */
+        html, body {
             margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: 'Dela Gothic One', sans-serif;
-        }
-
-        .logo {
-            text-decoration: none;
-            color: var(--yellow);
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 4px 4px 0 #000;
-        }
-
-        /* Контейнер, который обрезает лишнее */
-        .smartlink-clipper {
+            padding: 0;
+            height: 100%;
             width: 100%;
-            max-width: 480px; /* Стандартная ширина бандлинка */
-            height: 620px;    /* ВЫСОТА КОНТЕЙНЕРА: подбери так, чтобы куки скрылись */
-            overflow: hidden; /* ГЛАВНОЕ: скрывает всё, что выходит за рамки */
-            border: 5px solid var(--black);
-            box-shadow: 12px 12px 0 var(--yellow);
+            overflow: hidden; /* Запрещаем общий скролл, чтобы скрыть подвал */
+            background-color: #000;
+        }
+
+        /* Контейнер на весь экран */
+        .wrapper {
             position: relative;
-            background: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        /* Сам фрейм с контентом */
+        /* Iframe делаем ВЫШЕ экрана, чтобы низ (куки и powered by) ушел вниз за границу */
         iframe {
-            width: 100%;
-            height: 750px;    /* ВЫСОТА ФРЕЙМА: должна быть больше высоты контейнера */
-            border: none;
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            /* 105% или +100px высоты гарантированно прячут нижнюю плашку */
+            height: calc(100vh + 80px); 
+            border: none;
         }
 
-        .footer-note {
-            margin-top: 30px;
+        /* Если хочешь оставить логотип FLASHSOUND поверх всего (опционально) */
+        .overlay-logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
             font-family: sans-serif;
             font-weight: 900;
-            font-size: 0.8rem;
-            color: #ccc;
+            color: #ffdf00;
+            text-decoration: none;
+            background: #000;
+            padding: 5px 10px;
+            font-size: 12px;
+            border: 2px solid #ffdf00;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <a href="https://me.flashsound.v6.navy/" class="logo">FLASHSOUND</a>
+    <a href="https://me.flashsound.v6.navy/" class="overlay-logo">FLASHSOUND</a>
 
-    <div class="smartlink-clipper">
-        <iframe src="https://muz.lc/middlemusiclinknumb1"></iframe>
+    <div class="wrapper">
+        <iframe src="https://muz.lc/middlemusiclinknumb1" allow="autoplay"></iframe>
     </div>
-
-    <div class="footer-note">© 2026 FLASHSOUND DISTRIBUTION</div>
 
 </body>
 </html>
