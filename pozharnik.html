@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bandit001, AzerOne - Pozharnik</title>
     <style>
-        /* Убираем все отступы и скролл у самой страницы */
+       
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Запрещаем общий скролл, чтобы скрыть подвал */
+            overflow: hidden; 
             background-color: #000;
         }
 
@@ -23,18 +23,18 @@
             overflow: hidden;
         }
 
-        /* Iframe делаем ВЫШЕ экрана, чтобы низ (куки и powered by) ушел вниз за границу */
+  
         iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            /* 105% или +100px высоты гарантированно прячут нижнюю плашку */
+
             height: calc(100vh + 80px); 
             border: none;
         }
 
-        /* Если хочешь оставить логотип FLASHSOUND поверх всего (опционально) */
+
         .overlay-logo {
             position: fixed;
             top: 10px;
